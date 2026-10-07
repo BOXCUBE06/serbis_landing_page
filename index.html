@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SERBIS · MDRRMO Echague</title>
+<meta name="description" content="Request services, book an ambulance and borrow equipment from MDRRMO Echague, Isabela, using the SERBIS Android app.">
+<meta name="theme-color" content="#16483A">
+<meta property="og:title" content="SERBIS · MDRRMO Echague">
+<meta property="og:description" content="Ask MDRRMO Echague for help, from your phone.">
+<meta property="og:image" content="assets/logo.png">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:"Plus Jakarta Sans",system-ui,sans-serif;color:#1C2B24;background:#F6F3EE}
+a{color:#16483A}a:hover{color:#0a2620}
+img,svg{max-width:100%}
+section[id]{scroll-margin-top:76px}
+html{scroll-behavior:smooth}
+a{transition:filter .15s ease,color .15s ease,background-color .15s ease,transform .15s ease}
+a[style*="border-radius:999px"]:hover{filter:brightness(0.94)}
+a[style*="border-radius:999px"]:active{transform:scale(0.98)}
+a:focus-visible{outline:3px solid #1F6B4A;outline-offset:3px}
+.heroBand a:focus-visible,#download a:focus-visible{outline-color:#E9A040}
+@keyframes fillbar{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes softpulse{0%{box-shadow:0 0 0 0 rgba(233,160,64,0.6)}70%,100%{box-shadow:0 0 0 9px rgba(233,160,64,0)}}
+.pbar1,.pbar2{transform-origin:left center;animation:fillbar 600ms cubic-bezier(0.16,1,0.3,1) both}
+.pbar1{animation-delay:350ms}
+.pbar2{animation-delay:850ms}
+.pdot{animation:softpulse 1.4s ease-out 1.5s 2}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}a{transition:none}.pbar1,.pbar2,.pdot{animation:none}}
+@media (max-width:720px){
+.hdr{padding:14px 20px!important}
+.navlink{display:none!important}
+.hero{padding:40px 20px 48px!important;gap:32px!important}
+.pad{padding:56px 20px!important}
+.pad>div{gap:32px!important}
+.ftr{padding:28px 20px!important}
+.dlCard{padding:24px!important}
+.adminSide{display:none!important}
+.adminMock{min-height:0!important}
+h1{font-size:34px!important;line-height:42px!important}
+h2{font-size:28px!important;line-height:36px!important}
+}
+@media (max-width:359px){
+.heroPhone{zoom:0.88}
+}
+</style>
+</head>
+<body>
+<div style="width:100%;box-sizing:border-box;font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#1C2B24;background:#F6F3EE;display:flex;flex-direction:column">
+
+<!-- Header -->
+<header class="hdr" style="position:sticky;top:0;z-index:10;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:20px 48px;background:#ffffff;border-bottom:1px solid #E3DDD1">
+<a href="#top" style="display:inline-flex;align-items:center;gap:10px;font-size:22px;font-weight:700;letter-spacing:-0.02em;color:#16483A;text-decoration:none"><img src="assets/logo.png" alt="" width="36" height="36" style="width:36px;height:36px;border-radius:50%;display:block">SERBIS</a>
+<nav style="display:flex;flex-wrap:wrap;gap:8px;align-items:center">
+<a href="#overview" class="navlink" style="padding:12px 14px;font-size:14px;font-weight:600;color:#2F3A34;text-decoration:none">Overview</a>
+<a href="#mobile" class="navlink" style="padding:12px 14px;font-size:14px;font-weight:600;color:#2F3A34;text-decoration:none">Mobile app</a>
+<a href="#admin" class="navlink" style="padding:12px 14px;font-size:14px;font-weight:600;color:#2F3A34;text-decoration:none">For staff</a>
+<a href="#download" style="padding:12px 20px;font-size:14px;font-weight:700;color:#ffffff;background:#1F6B4A;border-radius:999px;text-decoration:none">Download</a>
+</nav>
+</header>
+
+<!-- Hero -->
+<div class="heroBand" style="background:#16483A">
+<section id="top" class="hero" style="display:flex;flex-wrap:wrap;gap:48px;align-items:center;padding:80px 48px;max-width:1280px;margin:0 auto;width:100%;box-sizing:border-box">
+<div style="flex:1 1 480px;min-width:0;display:flex;flex-direction:column;gap:24px">
+<h1 style="margin:0;color:#ffffff;font-size:52px;line-height:60px;font-weight:700;letter-spacing:-0.03em">Ask MDRRMO Echague for help, from your phone.</h1>
+<p style="margin:0;font-size:18px;line-height:28px;color:rgba(255,255,255,0.88);max-width:560px">Book a non-emergency ambulance, request a service, or borrow equipment. Then follow every request in the app until the office answers.</p>
+<p lang="fil" style="margin:0;font-size:16px;line-height:26px;color:rgba(255,255,255,0.88);max-width:560px">Humiling ng serbisyo, mag-book ng ambulansya, o humiram ng kagamitan mula sa inyong telepono, at subaybayan ang bawat request sa app.</p>
+<div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+<a href="#download" style="display:inline-flex;align-items:center;gap:10px;padding:16px 28px;font-size:16px;font-weight:700;color:#16483A;background:#ffffff;border-radius:999px;text-decoration:none;box-shadow:0 8px 16px -4px rgba(0,0,0,0.25)">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16483A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 11l5 5 5-5"/><path d="M5 20h14"/></svg>
+Download the app</a>
+<a href="#overview" style="display:inline-flex;align-items:center;padding:16px 24px;font-size:16px;font-weight:600;color:#ffffff;background:transparent;border:1px solid rgba(255,255,255,0.55);border-radius:999px;text-decoration:none">See how it works</a>
+</div>
+<p style="margin:0;font-size:14px;line-height:20px;color:rgba(255,255,255,0.78)">For Android phones. SERBIS is an office-hours service, not an emergency line.</p>
+</div>
+<div style="flex:1 1 360px;min-width:0;display:flex;justify-content:center">
+<!-- Phone mock -->
+<div class="heroPhone" role="img" aria-label="SERBIS mobile app home screen with the latest request, service shortcuts and bottom navigation" style="width:320px;height:670px;box-sizing:border-box;border-radius:44px;border:10px solid #0a2620;background:#F6F3EE;overflow:hidden;position:relative;box-shadow:0 0 0 1px rgba(255,255,255,0.14),0 28px 64px rgba(2,20,16,0.4)">
+<div style="width:390px;height:844px;transform:scale(0.769);transform-origin:top left;box-sizing:border-box;background:#F6F3EE;font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#1C2B24;display:flex;flex-direction:column;overflow:hidden">
+<div style="padding:44px 16px 22px;background:#16483A;border-radius:0 0 24px 24px;display:flex;flex-direction:column;gap:18px;color:#ffffff">
+<div style="display:flex;align-items:center;gap:10px">
+<span style="flex-grow:1;font-size:14px;font-weight:600;color:rgba(255,255,255,0.9)">SERBIS · Echague MDRRMO</span>
+<span style="width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,0.25);display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16V11a6 6 0 0112 0v5l1.5 2h-15L6 16z"/><path d="M10 21h4"/></svg></span>
+<span style="width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,0.25);display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6z"/></svg></span>
+</div>
+<div><div style="font-size:15px;color:rgba(255,255,255,0.85)">Good morning,</div><div style="margin-top:2px;font-size:26px;font-weight:600;letter-spacing:-0.01em;line-height:1.25">Juan Dela Cruz</div></div>
+<div style="display:flex;flex-direction:column;gap:12px;padding:16px;border-radius:16px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16)">
+<span style="display:flex;justify-content:space-between;align-items:center;gap:10px"><span style="font-size:14px;color:rgba(255,255,255,0.85)">Your latest request</span><span style="font-size:14px;font-weight:600;color:#BFE3CD">Open in Track</span></span>
+<span style="font-size:17px;font-weight:600">Relief goods distribution</span>
+<span style="display:flex;align-items:center;gap:10px;font-size:20px;font-weight:600"><span class="pdot" style="width:12px;height:12px;border-radius:50%;background:#E9A040"></span>Under review</span>
+<span style="display:grid;grid-template-columns:repeat(3,1fr);gap:4px"><span class="pbar1" style="height:6px;border-radius:3px;background:#ffffff"></span><span class="pbar2" style="height:6px;border-radius:3px;background:#E9A040"></span><span style="height:6px;border-radius:3px;background:rgba(255,255,255,0.22)"></span></span>
+<span style="font-size:14px;color:rgba(255,255,255,0.85)">Updated today, 9:14 AM · 1 more in progress</span>
+</div>
+</div>
+<div style="flex-grow:1;padding:16px 16px 24px">
+<div style="margin:12px 4px 10px;font-size:16px;font-weight:600;color:#1E3D2F">What do you need?</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+<div style="display:flex;flex-direction:column;gap:12px;padding:16px;min-height:132px;box-sizing:border-box;background:#ffffff;border:1px solid #ECE7DE;border-radius:14px"><span style="width:48px;height:48px;border-radius:12px;background:#E6F0EA;display:flex;align-items:center;justify-content:center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1F6B4A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V4h6v3M12 11v5M9.5 13.5h5"/></svg></span><span style="display:flex;flex-direction:column;gap:3px"><span style="font-size:16px;font-weight:600;line-height:1.3">Patient transport</span><span style="font-size:14px;line-height:1.4;color:#4A544E">Check-ups and transfers</span></span></div>
+<div style="display:flex;flex-direction:column;gap:12px;padding:16px;min-height:132px;box-sizing:border-box;background:#ffffff;border:1px solid #ECE7DE;border-radius:14px"><span style="width:48px;height:48px;border-radius:12px;background:#E6F0EA;display:flex;align-items:center;justify-content:center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1F6B4A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="5" rx="1"/><path d="M5 9v11h14V9M10 13h4"/></svg></span><span style="display:flex;flex-direction:column;gap:3px"><span style="font-size:16px;font-weight:600;line-height:1.3">Borrow equipment</span><span style="font-size:14px;line-height:1.4;color:#4A544E">Wheelchairs, beds and more</span></span></div>
+<div style="display:flex;flex-direction:column;gap:12px;padding:16px;min-height:132px;box-sizing:border-box;background:#ffffff;border:1px solid #ECE7DE;border-radius:14px"><span style="width:48px;height:48px;border-radius:12px;background:#E6F0EA;display:flex;align-items:center;justify-content:center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1F6B4A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5c3-1 6-1 9 1 3-2 6-2 9-1v14c-3-1-6-1-9 1-3-2-6-2-9-1z"/><path d="M12 6v14"/></svg></span><span style="display:flex;flex-direction:column;gap:3px"><span style="font-size:16px;font-weight:600;line-height:1.3">Safety guides</span><span style="font-size:14px;line-height:1.4;color:#4A544E">First aid and preparedness</span></span></div>
+<div style="display:flex;flex-direction:column;gap:12px;padding:16px;min-height:132px;box-sizing:border-box;background:#ffffff;border:1px solid #ECE7DE;border-radius:14px"><span style="width:48px;height:48px;border-radius:12px;background:#E6F0EA;display:flex;align-items:center;justify-content:center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1F6B4A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="6.5" height="6.5" rx="1"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1"/></svg></span><span style="display:flex;flex-direction:column;gap:3px"><span style="font-size:16px;font-weight:600;line-height:1.3">All services</span><span style="font-size:14px;line-height:1.4;color:#4A544E">Road clearing, relief, trainings</span></span></div>
+</div>
+</div>
+<div style="height:84px;flex-shrink:0;background:#ffffff;border-top:1px solid #ECE7DE;display:grid;grid-template-columns:repeat(5,1fr);align-items:center;padding:0 6px 8px;box-sizing:border-box">
+<span style="display:flex;flex-direction:column;align-items:center;gap:4px;color:#1F6B4A;font-size:13px;font-weight:600"><span style="width:56px;height:30px;border-radius:999px;background:#E6F0EA;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F6B4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10l8-6 8 6v10H4z"/><path d="M10 20v-5h4v5"/></svg></span>Home</span>
+<span style="display:flex;flex-direction:column;align-items:center;gap:4px;color:#3E4842;font-size:13px"><span style="height:30px;display:flex;align-items:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3E4842" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V4h6v3M12 11v5M9.5 13.5h5"/></svg></span>Ambulance</span>
+<span style="display:flex;flex-direction:column;align-items:center;gap:4px;color:#3E4842;font-size:13px"><span style="height:30px;display:flex;align-items:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3E4842" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="6.5" height="6.5" rx="1"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1"/></svg></span>Services</span>
+<span style="display:flex;flex-direction:column;align-items:center;gap:4px;color:#3E4842;font-size:13px"><span style="height:30px;display:flex;align-items:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3E4842" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="5" rx="1"/><path d="M5 9v11h14V9M10 13h4"/></svg></span>Borrow</span>
+<span style="display:flex;flex-direction:column;align-items:center;gap:4px;color:#3E4842;font-size:13px"><span style="height:30px;display:flex;align-items:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3E4842" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h4M11 16l2 2 3.5-3.5"/></svg></span>Track</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+
+<!-- Overview -->
+<section id="overview" class="pad" style="padding:72px 48px;background:#F6F3EE">
+<div style="max-width:1184px;margin:0 auto;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px;max-width:640px">
+<h2 style="margin:0;font-size:36px;line-height:44px;font-weight:700;letter-spacing:-0.02em">One request, from the phone to the office and back.</h2>
+<p style="margin:0;font-size:16px;line-height:26px;color:#4A544E">A resident files a request in the app. MDRRMO staff review it in the admin panel. The status updates in the app as staff act on it.</p>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:24px">
+<div style="flex:1 1 280px;min-width:0;border-top:3px solid #1F6B4A;padding:20px 0 0;display:flex;flex-direction:column;gap:10px">
+<span style="font-size:14px;font-weight:700;color:#16483A">Step 1</span>
+<h3 style="margin:0;font-size:20px;font-weight:700">File a request</h3>
+<p style="margin:0;font-size:15px;line-height:24px;color:#4A544E">Residents book an ambulance, ask for a service or borrow equipment from the mobile app.</p>
+</div>
+<div style="flex:1 1 280px;min-width:0;border-top:3px solid #1F6B4A;padding:20px 0 0;display:flex;flex-direction:column;gap:10px">
+<span style="font-size:14px;font-weight:700;color:#16483A">Step 2</span>
+<h3 style="margin:0;font-size:20px;font-weight:700">Staff review</h3>
+<p style="margin:0;font-size:15px;line-height:24px;color:#4A544E">Staff approve and assign a unit, reschedule, or disapprove with a reason. Approved items move forward.</p>
+</div>
+<div style="flex:1 1 280px;min-width:0;border-top:3px solid #1F6B4A;padding:20px 0 0;display:flex;flex-direction:column;gap:10px">
+<span style="font-size:14px;font-weight:700;color:#16483A">Step 3</span>
+<h3 style="margin:0;font-size:20px;font-weight:700">Track the result</h3>
+<p style="margin:0;font-size:15px;line-height:24px;color:#4A544E">Residents see each status in the Track tab, with the office's reason when a request is not approved.</p>
+</div>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center">
+<span style="font-size:14px;font-weight:600;color:#4A544E;margin-right:6px">Request statuses</span>
+<span style="font-size:12px;font-weight:600;padding:4px 12px;border-radius:999px;background:#fdf1e1;color:#8a4b00">Pending</span>
+<span style="font-size:12px;font-weight:600;padding:4px 12px;border-radius:999px;background:#ece6f7;color:#5b21b6">Booked</span>
+<span style="font-size:12px;font-weight:600;padding:4px 12px;border-radius:999px;background:#e8f0fb;color:#155fa8">Responding</span>
+<span style="font-size:12px;font-weight:600;padding:4px 12px;border-radius:999px;background:#dcece7;color:#16483A">Resolved</span>
+<span style="font-size:12px;font-weight:600;padding:4px 12px;border-radius:999px;background:#fbe9e8;color:#b3261e">Disapproved</span>
+<span style="font-size:12px;font-weight:600;padding:4px 12px;border-radius:999px;background:#e9edf2;color:#4A544E">Cancelled</span>
+</div>
+</div>
+</section>
+
+<!-- Mobile app -->
+<section id="mobile" class="pad" style="padding:80px 48px;background:#ffffff">
+<div style="max-width:1184px;margin:0 auto;display:flex;flex-wrap:wrap;gap:48px;align-items:center">
+<div style="flex:1 1 440px;min-width:0;display:flex;justify-content:center;gap:20px;flex-wrap:wrap">
+<div role="img" aria-label="Mobile app, Request an ambulance, step 1 of 5: patient details" style="width:232px;height:480px;box-sizing:border-box;border-radius:36px;border:8px solid #0a2620;background:#F6F3EE;overflow:hidden;position:relative;box-shadow:0 20px 48px rgba(2,20,16,0.24)">
+<div style="width:390px;height:844px;transform:scale(0.554);transform-origin:top left;box-sizing:border-box;background:#F6F3EE;font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#1C2B24;display:flex;flex-direction:column;overflow:hidden">
+<div style="padding:48px 16px 20px;background:#16483A;border-radius:0 0 20px 20px;display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;align-items:center;gap:12px">
+<span style="width:44px;height:44px;flex-shrink:0;border-radius:50%;border:1px solid rgba(255,255,255,0.25);display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></span>
+<div style="flex-grow:1;display:flex;flex-direction:column;gap:2px"><div style="font-size:20px;font-weight:600;color:#ffffff;line-height:1.3">Request an ambulance</div><div style="font-size:14px;color:rgba(255,255,255,0.88)">Step 1 of 5 · Patient</div></div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(5,1fr);gap:4px"><span style="height:4px;border-radius:2px;background:#ffffff"></span><span style="height:4px;border-radius:2px;background:rgba(255,255,255,0.25)"></span><span style="height:4px;border-radius:2px;background:rgba(255,255,255,0.25)"></span><span style="height:4px;border-radius:2px;background:rgba(255,255,255,0.25)"></span><span style="height:4px;border-radius:2px;background:rgba(255,255,255,0.25)"></span></div>
+</div>
+<div style="flex-grow:1;padding:16px 16px 24px;display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;gap:10px;align-items:flex-start;padding:12px 14px;border-radius:12px;font-size:14px;line-height:1.45;background:#FBF3E6;color:#6E3A08"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8A4B0C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0"><path d="M12 3l9.5 17h-19z"/><path d="M12 10v4M12 17.5v.01"/></svg><span>For non-emergency transport only. In an emergency, <b style="font-weight:600">call the hotline</b>.</span></div>
+<div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:15px;font-weight:600">Who needs the ambulance?</span>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:4px;background:#EFEAE1;border-radius:12px"><span style="height:44px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:15px;color:#3E4842">Myself</span><span style="height:44px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:600;color:#1F6B4A;background:#ffffff;box-shadow:0 1px 2px rgba(0,0,0,0.08)">Someone else</span></div></div>
+<div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:15px;font-weight:600">Full name <span style="color:#A8352A">*</span></span><span style="height:52px;box-sizing:border-box;border:1px solid #D9D2C6;border-radius:12px;background:#FBFAF7;padding:0 14px;display:flex;align-items:center;font-size:16px;color:#5F6862">e.g. Maria Santos</span></div>
+<div style="display:grid;grid-template-columns:100px 1fr;gap:10px">
+<div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:15px;font-weight:600">Age <span style="color:#A8352A">*</span></span><span style="height:52px;box-sizing:border-box;border:1px solid #D9D2C6;border-radius:12px;background:#FBFAF7;padding:0 14px;display:flex;align-items:center;font-size:16px;color:#5F6862">62</span></div>
+<div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:15px;font-weight:600">Contact number <span style="color:#A8352A">*</span></span><span style="height:52px;box-sizing:border-box;border:1px solid #D9D2C6;border-radius:12px;background:#FBFAF7;padding:0 14px;display:flex;align-items:center;font-size:16px;color:#1C2B24">0917 000 0101</span></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:15px;font-weight:600">Barangay <span style="color:#A8352A">*</span></span><span style="height:52px;box-sizing:border-box;border:1px solid #D9D2C6;border-radius:12px;background:#FBFAF7;padding:0 14px;display:flex;align-items:center;justify-content:space-between;font-size:16px;color:#5F6862">Choose barangay<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3E4842" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span></div>
+</div>
+<div style="background:#ffffff;border-top:1px solid #ECE7DE;padding:12px 16px 24px"><span style="height:52px;border-radius:12px;background:#1F6B4A;color:#ffffff;font-size:16px;font-weight:600;display:flex;align-items:center;justify-content:center">Next: Trip</span></div>
+</div>
+</div>
+<div role="img" aria-label="Mobile app, Track tab, showing a request under review and a borrowed wheelchair" style="width:232px;height:480px;box-sizing:border-box;border-radius:36px;border:8px solid #0a2620;background:#F6F3EE;overflow:hidden;position:relative;margin-top:32px;box-shadow:0 20px 48px rgba(2,20,16,0.24)">
+<div style="width:390px;height:844px;transform:scale(0.554);transform-origin:top left;box-sizing:border-box;background:#F6F3EE;font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#1C2B24;display:flex;flex-direction:column;overflow:hidden">
+<div style="padding:48px 16px 20px;background:#16483A;border-radius:0 0 20px 20px">
+<div style="display:flex;align-items:center;gap:12px">
+<div style="flex-grow:1;display:flex;flex-direction:column;gap:2px"><div style="font-size:20px;font-weight:600;color:#ffffff;line-height:1.3">Track</div><div style="font-size:14px;color:rgba(255,255,255,0.88)">Your requests and borrowed items</div></div>
+<span style="width:44px;height:44px;flex-shrink:0;border-radius:50%;border:1px solid rgba(255,255,255,0.25);display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16V11a6 6 0 0112 0v5l1.5 2h-15L6 16z"/><path d="M10 21h4"/></svg></span>
+<span style="width:44px;height:44px;flex-shrink:0;border-radius:50%;border:1px solid rgba(255,255,255,0.25);display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6z"/></svg></span>
+</div>
+</div>
+<div style="flex-grow:1;padding:16px 16px 24px;display:flex;flex-direction:column">
+<div style="display:flex;align-items:baseline;gap:8px;margin:4px 4px 10px"><span style="font-size:16px;font-weight:600;color:#1E3D2F">In progress</span><span style="font-size:15px;color:#566059">1</span></div>
+<div style="background:#ffffff;border:1px solid #ECE7DE;border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;flex-direction:column;gap:4px"><div style="font-size:18px;font-weight:600;line-height:1.3">Relief goods distribution</div><span style="font-size:14px;line-height:1.4;color:#4A544E">TXN-000034 · Sent Wed, Sep 23, 8:24 AM</span></div>
+<div style="display:flex;flex-direction:column;gap:6px"><span style="display:inline-flex;align-items:center;gap:10px;font-size:20px;font-weight:600;color:#7A420A"><span style="width:12px;height:12px;border-radius:50%;background:#D98A1E"></span>Under review</span><span style="font-size:14px;line-height:1.4;color:#4A544E">Updated today, 9:14 AM</span><span style="font-size:15px;line-height:1.5;color:#3E4842">MDRRMO is checking your request. Updates appear here and under the bell.</span></div>
+<div style="display:flex;flex-direction:column">
+<div style="display:grid;grid-template-columns:20px 1fr;column-gap:12px"><div style="display:flex;flex-direction:column;align-items:center;padding-top:2px"><span style="width:20px;height:20px;border-radius:50%;background:#1F6B4A;display:flex;align-items:center;justify-content:center"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span><span style="width:2px;flex-grow:1;min-height:10px;background:#1F6B4A"></span></div><div style="padding:0 0 14px;font-size:15px;line-height:1.4">Sent <span style="font-size:14px;color:#4A544E">· Sep 23, 8:24 AM</span></div></div>
+<div style="display:grid;grid-template-columns:20px 1fr;column-gap:12px"><div style="display:flex;flex-direction:column;align-items:center;padding-top:2px"><span style="width:20px;height:20px;border-radius:50%;border:3px solid #D98A1E;box-sizing:border-box;background:#ffffff"></span><span style="width:2px;flex-grow:1;min-height:10px;background:#E6E0D6"></span></div><div style="padding:0 0 14px;font-size:15px;line-height:1.4;font-weight:600">Under review</div></div>
+<div style="display:grid;grid-template-columns:20px 1fr;column-gap:12px"><div style="display:flex;flex-direction:column;align-items:center;padding-top:2px"><span style="width:20px;height:20px;border-radius:50%;border:2px solid #D9D2C6;box-sizing:border-box;background:#ffffff"></span></div><div style="font-size:15px;line-height:1.4;color:#566059">Completed</div></div>
+</div>
+<span style="min-height:48px;padding:0 16px;border:1px solid #E3BDB6;border-radius:12px;background:#ffffff;font-size:15px;font-weight:600;color:#A8352A;align-self:flex-start;display:inline-flex;align-items:center">Cancel this request</span>
+</div>
+<div style="display:flex;align-items:baseline;gap:8px;margin:28px 4px 10px"><span style="font-size:16px;font-weight:600;color:#1E3D2F">Borrowed items</span><span style="font-size:15px;color:#566059">1</span></div>
+<div style="background:#ffffff;border:1px solid #ECE7DE;border-radius:14px;overflow:hidden"><div style="display:flex;align-items:center;gap:12px;padding:14px 16px;min-height:68px;box-sizing:border-box"><span style="flex-grow:1;display:flex;flex-direction:column;gap:4px"><span style="font-size:16px;font-weight:600;line-height:1.3">Wheelchair × 1</span><span style="display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:500;color:#7A420A"><span style="width:8px;height:8px;border-radius:50%;background:#D98A1E"></span>Under review</span></span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B746F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></div></div>
+</div>
+<div style="height:84px;flex-shrink:0;background:#ffffff;border-top:1px solid #ECE7DE;display:grid;grid-template-columns:repeat(5,1fr);align-items:center;padding:0 6px 8px;box-sizing:border-box">
+<span style="display:flex;flex-direction:column;align-items:center;gap:4px;color:#3E4842;font-size:13px"><span style="height:30px;display:flex;align-items:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3E4842" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10l8-6 8 6v10H4z"/><path d="M10 20v-5h4v5"/></svg></span>Home</span>
+<span style="display:flex;flex-direction:column;align-items:center;gap:4px;color:#3E4842;font-size:13px"><span style="height:30px;display:flex;align-items:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3E4842" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V4h6v3M12 11v5M9.5 13.5h5"/></svg></span>Ambulance</span>
+<span style="display:flex;flex-direction:column;align-items:center;gap:4px;color:#3E4842;font-size:13px"><span style="height:30px;display:flex;align-items:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3E4842" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="6.5" height="6.5" rx="1"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1"/></svg></span>Services</span>
+<span style="display:flex;flex-direction:column;align-items:center;gap:4px;color:#3E4842;font-size:13px"><span style="height:30px;display:flex;align-items:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3E4842" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="5" rx="1"/><path d="M5 9v11h14V9M10 13h4"/></svg></span>Borrow</span>
+<span style="display:flex;flex-direction:column;align-items:center;gap:4px;color:#1F6B4A;font-size:13px;font-weight:600"><span style="width:56px;height:30px;border-radius:999px;background:#E6F0EA;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F6B4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h4M11 16l2 2 3.5-3.5"/></svg></span>Track</span>
+</div>
+</div>
+</div>
+</div>
+<div style="flex:1 1 440px;min-width:0;display:flex;flex-direction:column;gap:20px">
+<h2 style="margin:0;font-size:36px;line-height:44px;font-weight:700;letter-spacing:-0.02em">Ask for help and follow it on your phone.</h2>
+<p style="margin:0;font-size:16px;line-height:26px;color:#4A544E">For households, barangay halls and organizations. The services shown depend on your account type.</p>
+<ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px;font-size:15px;line-height:22px;color:#2F3A34">
+<li><strong>Book an ambulance</strong> in five short steps.</li>
+<li><strong>Request a service</strong> such as road clearing, relief goods, training or certification.</li>
+<li><strong>Borrow equipment</strong> for pickup or delivery, or ask for an item that is not listed.</li>
+<li><strong>Track every request</strong> with a clear status and the office's reason.</li>
+<li><strong>Read safety guides offline, find hotlines and get alerts</strong>, in English or Filipino.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- Download -->
+<section id="download" class="pad" style="padding:80px 48px;background:#0a2620">
+<div style="max-width:1184px;margin:0 auto;display:flex;flex-wrap:wrap;gap:48px;align-items:center">
+<div style="flex:1 1 440px;min-width:0;display:flex;flex-direction:column;gap:20px">
+<h2 style="margin:0;font-size:36px;line-height:44px;font-weight:700;letter-spacing:-0.02em;color:#ffffff">Download SERBIS for Android</h2>
+<p style="margin:0;font-size:16px;line-height:26px;color:#cfe3dc">SERBIS is not on the Play Store, so you install it from a file. Your phone may warn you about an unknown app. That is expected for apps outside the Play Store.</p>
+<div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+<a href="#" aria-label="Download the SERBIS app file" style="display:inline-flex;align-items:center;gap:10px;padding:18px 32px;font-size:17px;font-weight:700;color:#0a2620;background:#34c39a;border-radius:999px;text-decoration:none">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0a2620" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 11l5 5 5-5"/><path d="M5 20h14"/></svg>
+Download the app</a>
+<span style="font-size:14px;color:#cfe3dc">Version [VERSION] · [FILE SIZE] · Android [MINIMUM VERSION] or newer</span>
+</div>
+<p style="margin:0;font-size:14px;line-height:22px;color:#cfe3dc">Android phones only. iPhones are not supported. Need help installing? Call <a href="tel:09176262352" style="color:#ffffff;text-decoration:underline">0917 626 2352</a> or visit the MDRRMO office.</p>
+</div>
+<div class="dlCard" style="flex:1 1 440px;min-width:0;background:#0f3a30;border-radius:24px;padding:32px;display:flex;flex-direction:column;gap:16px">
+<span style="font-size:12px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#9fd8c5">How to install</span>
+<ol style="margin:0;padding-left:22px;display:flex;flex-direction:column;gap:12px;font-size:15px;line-height:22px;color:#ffffff">
+<li>Tap Download the app and wait for the file to finish.</li>
+<li>Open the file from your notifications or Downloads.</li>
+<li>If your phone asks, allow installs from this source.</li>
+<li>Open SERBIS and create your account with your mobile number.</li>
+<li>Organizations: wait for MDRRMO to activate your account.</li>
+</ol>
+<p style="margin:0;font-size:13px;line-height:20px;color:#9fbfb5">The steps can look different on each phone brand.</p>
+<span lang="fil" style="font-size:12px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#9fd8c5;margin-top:8px">Sa Filipino</span>
+<ol lang="fil" style="margin:0;padding-left:22px;display:flex;flex-direction:column;gap:10px;font-size:15px;line-height:22px;color:#ffffff"><li>I-tap ang Download the app at hintaying matapos ang file.</li><li>Buksan ang file mula sa notifications o sa Downloads.</li><li>Kung may lumabas na babala, payagan ang pag-install mula sa source na ito.</li><li>Buksan ang SERBIS at gumawa ng account gamit ang inyong mobile number.</li><li>Mga organisasyon: hintaying i-activate ng MDRRMO ang inyong account.</li></ol>
+</div>
+</div>
+</section>
+
+<!-- Admin panel -->
+<section id="admin" class="pad" style="padding:80px 48px">
+<div style="max-width:1184px;margin:0 auto;display:flex;flex-wrap:wrap;gap:48px;align-items:center">
+<div style="flex:1 1 440px;min-width:0;display:flex;flex-direction:column;gap:20px">
+<h2 style="margin:0;font-size:36px;line-height:44px;font-weight:700;letter-spacing:-0.02em">Run the office queue from one screen.</h2>
+<p style="margin:0;font-size:16px;line-height:26px;color:#4A544E">For MDRRMO staff. A web panel for the office queue. A super admin chooses which sections each staff account can open.</p>
+<ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px;font-size:15px;line-height:22px;color:#2F3A34">
+<li><strong>Resident requests.</strong> Review, approve, disapprove, resolve, or file a walk-in request.</li>
+<li><strong>Ambulance dispatch and equipment borrowing.</strong> Assign units, reschedule, print the conduction form, release items with a due date and confirm returns.</li>
+<li><strong>Fleet, responders and stock.</strong> Keep units, staff records and equipment up to date.</li>
+<li><strong>Accounts, documents, text blast and hotlines,</strong> with a dashboard, analytics and activity logs.</li>
+</ul>
+</div>
+<div style="flex:1 1 440px;min-width:0">
+<div class="adminMock" role="img" aria-label="Admin panel dashboard with available units, available responders, ongoing trips, overdue borrowing and most requested services" style="width:100%;box-sizing:border-box;min-height:340px;background:#ffffff;border-radius:24px;box-shadow:0 1px 2px rgba(0,0,0,0.04),0 4px 14px rgba(0,0,0,0.08);display:flex;overflow:hidden;font-family:'Plus Jakarta Sans',system-ui,sans-serif">
+<div class="adminSide" style="width:30%;flex-shrink:0;box-sizing:border-box;background:linear-gradient(180deg,#0f3d33 0%,#0a2620 100%);padding:14px 10px;display:flex;flex-direction:column;gap:10px;color:#ffffff">
+<div><div style="font-size:13px;line-height:16px;font-weight:800;letter-spacing:0.08em">SERBIS</div><div style="font-size:8px;line-height:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.7)">MDRRMO Echague</div></div>
+<div style="display:flex;flex-direction:column;gap:2px">
+<div style="font-size:8px;line-height:14px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.7);padding:0 8px">Overview</div>
+<div style="font-size:10px;line-height:14px;padding:6px 8px;border-radius:6px;background:rgba(52,195,154,0.18);color:#ffffff;font-weight:700">Dashboard</div>
+<div style="font-size:10px;line-height:14px;padding:6px 8px;color:rgba(255,255,255,0.84)">Analytics</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:2px">
+<div style="font-size:8px;line-height:14px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.7);padding:0 8px">Requests</div>
+<div style="font-size:10px;line-height:14px;padding:6px 8px;color:rgba(255,255,255,0.84)">Resident Requests</div>
+<div style="font-size:10px;line-height:14px;padding:6px 8px;color:rgba(255,255,255,0.84)">Ambulance Dispatch</div>
+<div style="font-size:10px;line-height:14px;padding:6px 8px;color:rgba(255,255,255,0.84)">Equipment Borrowing</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:2px">
+<div style="font-size:8px;line-height:14px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.7);padding:0 8px">Resources</div>
+<div style="font-size:10px;line-height:14px;padding:6px 8px;color:rgba(255,255,255,0.84)">Vehicles</div>
+<div style="font-size:10px;line-height:14px;padding:6px 8px;color:rgba(255,255,255,0.84)">Responders</div>
+</div>
+</div>
+<div style="flex:1;min-width:0;box-sizing:border-box;padding:16px;background:#f8fafc;display:flex;flex-direction:column;gap:10px">
+<div style="font-size:15px;line-height:20px;font-weight:700;color:#0f172a">Dashboard</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+<div style="background:#ffffff;border-radius:12px;padding:10px;box-shadow:0 1px 2px rgba(0,0,0,0.04),0 2px 8px rgba(0,0,0,0.06)">
+<div style="font-size:8px;line-height:12px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:rgba(0,0,0,0.6)">Available units</div>
+<div style="display:flex;align-items:baseline;gap:3px;margin-top:2px"><span style="font-size:20px;line-height:26px;font-weight:700;color:#0f172a">10</span><span style="font-size:11px;font-weight:600;color:rgba(0,0,0,0.6)">/ 15</span></div>
+<div style="height:4px;margin-top:6px;border-radius:999px;background:rgba(0,0,0,0.08);overflow:hidden"><div style="height:100%;width:67%;border-radius:999px;background:#297a67"></div></div>
+</div>
+<div style="background:#ffffff;border-radius:12px;padding:10px;box-shadow:0 1px 2px rgba(0,0,0,0.04),0 2px 8px rgba(0,0,0,0.06)">
+<div style="font-size:8px;line-height:12px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:rgba(0,0,0,0.6)">Available responders</div>
+<div style="display:flex;align-items:baseline;gap:3px;margin-top:2px"><span style="font-size:20px;line-height:26px;font-weight:700;color:#0f172a">4</span><span style="font-size:11px;font-weight:600;color:rgba(0,0,0,0.6)">/ 10</span></div>
+<div style="height:4px;margin-top:6px;border-radius:999px;background:rgba(0,0,0,0.08);overflow:hidden"><div style="height:100%;width:40%;border-radius:999px;background:#1976d2"></div></div>
+</div>
+<div style="background:#ffffff;border-radius:12px;padding:10px;box-shadow:0 1px 2px rgba(0,0,0,0.04),0 2px 8px rgba(0,0,0,0.06)">
+<div style="font-size:8px;line-height:12px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:rgba(0,0,0,0.6)">Ongoing trips</div>
+<div style="margin-top:2px;font-size:20px;line-height:26px;font-weight:700;color:#0f172a">5</div>
+</div>
+<div style="background:#ffffff;border-radius:12px;padding:10px;box-shadow:0 1px 2px rgba(0,0,0,0.04),0 2px 8px rgba(0,0,0,0.06)">
+<div style="font-size:8px;line-height:12px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:rgba(0,0,0,0.6)">Overdue borrowing</div>
+<div style="margin-top:2px;font-size:20px;line-height:26px;font-weight:700;color:#b3261e">6</div>
+</div>
+</div>
+<div style="background:#ffffff;border-radius:12px;padding:10px;box-shadow:0 1px 2px rgba(0,0,0,0.04),0 2px 8px rgba(0,0,0,0.06);display:flex;flex-direction:column;gap:8px">
+<div><div style="font-size:11px;line-height:16px;font-weight:600;color:#0f172a">Most requested</div><div style="font-size:9px;line-height:12px;color:rgba(0,0,0,0.6)">Requests by service, last 30 days</div></div>
+<div style="display:grid;grid-template-columns:minmax(80px,42%) 1fr 18px;align-items:center;gap:8px;font-size:9px;line-height:12px;color:#0f172a"><span>Ambulance / Medical Response</span><span style="height:6px;border-radius:999px;background:rgba(0,0,0,0.06);overflow:hidden"><span style="display:block;height:100%;width:97%;border-radius:999px;background:#297a67"></span></span><b style="text-align:right">29</b></div>
+<div style="display:grid;grid-template-columns:minmax(80px,42%) 1fr 18px;align-items:center;gap:8px;font-size:9px;line-height:12px;color:#0f172a"><span>MDRRMO Certification</span><span style="height:6px;border-radius:999px;background:rgba(0,0,0,0.06);overflow:hidden"><span style="display:block;height:100%;width:40%;border-radius:999px;background:#297a67"></span></span><b style="text-align:right">12</b></div>
+<div style="display:grid;grid-template-columns:minmax(80px,42%) 1fr 18px;align-items:center;gap:8px;font-size:9px;line-height:12px;color:#0f172a"><span>Debris Removal</span><span style="height:6px;border-radius:999px;background:rgba(0,0,0,0.06);overflow:hidden"><span style="display:block;height:100%;width:37%;border-radius:999px;background:#297a67"></span></span><b style="text-align:right">11</b></div>
+<div style="display:grid;grid-template-columns:minmax(80px,42%) 1fr 18px;align-items:center;gap:8px;font-size:9px;line-height:12px;color:#0f172a"><span>Sandbagging</span><span style="height:6px;border-radius:999px;background:rgba(0,0,0,0.06);overflow:hidden"><span style="display:block;height:100%;width:33%;border-radius:999px;background:#297a67"></span></span><b style="text-align:right">10</b></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="ftr" style="padding:32px 48px;background:#ffffff;border-top:1px solid #E3DDD1">
+<div style="max-width:1184px;margin:0 auto;display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;font-size:14px;line-height:20px;color:#4A544E">
+<span>MDRRMO Echague · Operations Center, Municipal Ground, San Fabian, Echague, Isabela</span>
+<span>Hotline: <a href="tel:09176262352" style="color:#16483A">0917 626 2352</a> / <a href="tel:09431320604" style="color:#16483A">0943 132 0604</a> · <a href="mailto:mdrrmo.echague@gmail.com" style="color:#16483A">mdrrmo.echague@gmail.com</a></span>
+<span>SERBIS is not an emergency line. Use the hotline numbers in the app.</span>
+</div>
+</footer>
+
+</div>
+</body>
+</html>
