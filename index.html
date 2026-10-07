@@ -12,18 +12,25 @@
 <meta property="og:url" content="https://serbis-landing-page.vercel.app/">
 <link rel="icon" type="image/png" href="assets/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Public+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 <style>
-body{margin:0;font-family:"Plus Jakarta Sans",system-ui,sans-serif;color:#1C2B24;background:#F6F3EE}
+body{margin:0;font-family:"Public Sans",system-ui,sans-serif;color:#14241D;background:#F2F5F3}
 a{color:#16483A}a:hover{color:#0a2620}
 img,svg{max-width:100%}
 section[id]{scroll-margin-top:76px}
 html{scroll-behavior:smooth}
 a{transition:filter .15s ease,color .15s ease,background-color .15s ease,transform .15s ease}
-a[style*="border-radius:999px"]:hover{filter:brightness(0.94)}
-a[style*="border-radius:999px"]:active{transform:scale(0.98)}
+.pill:hover{filter:brightness(0.94)}
+.pill:active{transform:scale(0.98)}
 a:focus-visible{outline:3px solid #1F6B4A;outline-offset:3px}
 .heroBand a:focus-visible,#download a:focus-visible{outline-color:#E9A040}
+.skip{position:absolute;left:12px;top:-60px;z-index:20;padding:12px 16px;background:#ffffff;color:#16483A;font-weight:700;border-radius:8px}
+.skip:focus{top:12px}
+::selection{background:#E9A040;color:#0a2620}
+.hdrCall,.deskNote{display:none}
+@media (hover:hover) and (pointer:fine){.deskNote{display:block}}
+.ios .dlBtn,.ios .deskNote{display:none!important}
+.dlStatus:empty{display:none}
 @keyframes fillbar{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 @keyframes softpulse{0%{box-shadow:0 0 0 0 rgba(233,160,64,0.6)}70%,100%{box-shadow:0 0 0 9px rgba(233,160,64,0)}}
 .pbar1,.pbar2{transform-origin:left center;animation:fillbar 600ms cubic-bezier(0.16,1,0.3,1) both}
@@ -34,6 +41,7 @@ a:focus-visible{outline:3px solid #1F6B4A;outline-offset:3px}
 @media (max-width:720px){
 .hdr{padding:14px 20px!important}
 .navlink:not(.navkeep){display:none!important}
+.hdrCall{display:inline-flex}
 .hero{padding:40px 20px 48px!important;gap:32px!important}
 .pad{padding:56px 20px!important}
 .pad>div{gap:32px!important}
@@ -50,19 +58,23 @@ h2{font-size:28px!important;line-height:36px!important}
 </style>
 </head>
 <body>
-<div style="width:100%;box-sizing:border-box;font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#1C2B24;background:#F6F3EE;display:flex;flex-direction:column">
+<script>if(/iPhone|iPad|iPod/.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1))document.documentElement.classList.add('ios')</script>
+<a href="#main" class="skip">Skip to content</a>
+<div style="width:100%;box-sizing:border-box;color:#14241D;background:#F2F5F3;display:flex;flex-direction:column">
 
 <!-- Header -->
-<header class="hdr" style="position:sticky;top:0;z-index:10;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:20px 48px;background:#ffffff;border-bottom:1px solid #E3DDD1">
+<header class="hdr" style="position:sticky;top:0;z-index:10;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:20px 48px;background:#ffffff;border-bottom:1px solid #D8E0DB">
 <a href="#top" style="display:inline-flex;align-items:center;gap:10px;font-size:22px;font-weight:700;letter-spacing:-0.02em;color:#16483A;text-decoration:none"><img src="assets/logo.png" alt="" width="36" height="36" style="width:36px;height:36px;border-radius:50%;display:block">SERBIS</a>
 <nav style="display:flex;flex-wrap:wrap;gap:8px;align-items:center">
 <a href="#overview" class="navlink" style="padding:12px 14px;font-size:14px;font-weight:600;color:#2F3A34;text-decoration:none">Overview</a>
 <a href="#mobile" class="navlink" style="padding:12px 14px;font-size:14px;font-weight:600;color:#2F3A34;text-decoration:none">Mobile app</a>
-<a href="#admin" class="navlink" style="padding:12px 14px;font-size:14px;font-weight:600;color:#2F3A34;text-decoration:none">For staff</a>
 <a href="#download" class="navlink navkeep" style="padding:12px 14px;font-size:14px;font-weight:600;color:#2F3A34;text-decoration:none">Install guide</a>
+<a href="#admin" class="navlink" style="padding:12px 14px;font-size:14px;font-weight:600;color:#2F3A34;text-decoration:none">For staff</a>
+<a href="tel:09176262352" class="hdrCall pill" style="align-items:center;gap:8px;padding:12px 16px;font-size:14px;font-weight:700;color:#0a2620;background:#E9A040;border-radius:999px;text-decoration:none"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0a2620" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2"/></svg>Emergency hotline</a>
 </nav>
 </header>
 
+<main id="main">
 <!-- Hero -->
 <div class="heroBand" style="background:#16483A">
 <section id="top" class="hero" style="display:flex;flex-wrap:wrap;gap:48px;align-items:center;padding:80px 48px;max-width:1280px;margin:0 auto;width:100%;box-sizing:border-box">
@@ -71,13 +83,15 @@ h2{font-size:28px!important;line-height:36px!important}
 <p style="margin:0;font-size:18px;line-height:28px;color:rgba(255,255,255,0.88);max-width:560px">Book a non-emergency ambulance, request a service, or borrow equipment. Then follow every request in the app until the office answers.</p>
 <p lang="fil" style="margin:0;font-size:16px;line-height:26px;color:rgba(255,255,255,0.88);max-width:560px">Humiling ng serbisyo, mag-book ng ambulansya, o humiram ng kagamitan mula sa inyong telepono, at subaybayan ang bawat request sa app.</p>
 <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
-<a href="https://github.com/BOXCUBE06/serbis_landing_page/releases/latest/download/serbis.apk" download style="display:inline-flex;align-items:center;gap:10px;padding:16px 28px;font-size:16px;font-weight:700;color:#16483A;background:#ffffff;border-radius:999px;text-decoration:none;box-shadow:0 8px 16px -4px rgba(0,0,0,0.25)">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16483A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 11l5 5 5-5"/><path d="M5 20h14"/></svg>
-Download the app</a>
-<a href="#overview" style="display:inline-flex;align-items:center;padding:16px 24px;font-size:16px;font-weight:600;color:#ffffff;background:transparent;border:1px solid rgba(255,255,255,0.55);border-radius:999px;text-decoration:none">See how it works</a>
+<a href="#download" class="pill" style="display:inline-flex;align-items:center;gap:10px;padding:16px 28px;font-size:16px;font-weight:700;color:#16483A;background:#ffffff;border-radius:999px;text-decoration:none;box-shadow:0 8px 16px -4px rgba(0,0,0,0.25)">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16483A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16"/><path d="M6 14l6 6 6-6"/></svg>
+Get the app</a>
+<a href="#overview" class="pill" style="display:inline-flex;align-items:center;padding:16px 24px;font-size:16px;font-weight:600;color:#ffffff;background:transparent;border:1px solid rgba(255,255,255,0.55);border-radius:999px;text-decoration:none">See how it works</a>
 </div>
-<p style="margin:0;font-size:13px;line-height:18px;color:rgba(255,255,255,0.8)">1.0.0 · 56.5 MB · Android 7.0</p>
-<p style="margin:0;font-size:14px;line-height:20px;color:rgba(255,255,255,0.78)">For Android phones. SERBIS is an office-hours service, not an emergency line.</p>
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:4px 14px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.18)">
+<span style="font-size:14px;line-height:20px;color:rgba(255,255,255,0.85)">SERBIS is not an emergency line.</span>
+<a href="tel:09176262352" style="display:inline-flex;align-items:center;gap:8px;min-height:44px;font-size:16px;font-weight:700;color:#E9A040;text-decoration:none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E9A040" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2"/></svg>Emergency? Call 0917 626 2352</a>
+</div>
 </div>
 <div style="flex:1 1 360px;min-width:0;display:flex;justify-content:center">
 <!-- Phone mock -->
@@ -121,37 +135,22 @@ Download the app</a>
 </div>
 
 <!-- Overview -->
-<section id="overview" class="pad" style="padding:72px 48px;background:#F6F3EE">
+<section id="overview" class="pad" style="padding:72px 48px;background:#F2F5F3">
 <div style="max-width:1184px;margin:0 auto;display:flex;flex-direction:column;gap:40px">
-<div style="display:flex;flex-direction:column;gap:12px;max-width:640px">
-<h2 style="margin:0;font-size:36px;line-height:44px;font-weight:700;letter-spacing:-0.02em">One request, from the phone to the office and back.</h2>
-<p style="margin:0;font-size:16px;line-height:26px;color:#4A544E">A resident files a request in the app. MDRRMO staff review it in the admin panel. The status updates in the app as staff act on it.</p>
-</div>
-<div style="display:flex;flex-wrap:wrap;gap:24px">
-<div style="flex:1 1 280px;min-width:0;border-top:3px solid #1F6B4A;padding:20px 0 0;display:flex;flex-direction:column;gap:10px">
-<span style="font-size:14px;font-weight:700;color:#16483A">Step 1</span>
-<h3 style="margin:0;font-size:20px;font-weight:700">File a request</h3>
-<p style="margin:0;font-size:15px;line-height:24px;color:#4A544E">Residents book an ambulance, ask for a service or borrow equipment from the mobile app.</p>
-</div>
-<div style="flex:1 1 280px;min-width:0;border-top:3px solid #1F6B4A;padding:20px 0 0;display:flex;flex-direction:column;gap:10px">
-<span style="font-size:14px;font-weight:700;color:#16483A">Step 2</span>
-<h3 style="margin:0;font-size:20px;font-weight:700">Staff review</h3>
-<p style="margin:0;font-size:15px;line-height:24px;color:#4A544E">Staff approve and assign a unit, reschedule, or disapprove with a reason. Approved items move forward.</p>
-</div>
-<div style="flex:1 1 280px;min-width:0;border-top:3px solid #1F6B4A;padding:20px 0 0;display:flex;flex-direction:column;gap:10px">
-<span style="font-size:14px;font-weight:700;color:#16483A">Step 3</span>
-<h3 style="margin:0;font-size:20px;font-weight:700">Track the result</h3>
-<p style="margin:0;font-size:15px;line-height:24px;color:#4A544E">Residents see each status in the Track tab, with the office's reason when a request is not approved.</p>
-</div>
-</div>
+<h2 style="margin:0;max-width:640px;font-size:36px;line-height:44px;font-weight:700;letter-spacing:-0.02em">One request, from the phone to the office and back.</h2>
+<ol style="margin:0;padding:0;list-style:none;max-width:640px">
+<li style="display:grid;grid-template-columns:32px 1fr;column-gap:20px"><div style="display:flex;flex-direction:column;align-items:center"><span style="width:32px;height:32px;border-radius:50%;background:#1F6B4A;color:#ffffff;font-size:15px;font-weight:700;display:flex;align-items:center;justify-content:center">1</span><span style="width:2px;flex-grow:1;background:#1F6B4A"></span></div><div style="padding:3px 0 32px"><h3 style="margin:0 0 6px;font-size:20px;line-height:26px;font-weight:700">A resident files a request</h3><p style="margin:0;font-size:16px;line-height:26px;color:#4A544E">Book an ambulance, ask for a service or borrow equipment from the mobile app.</p></div></li>
+<li style="display:grid;grid-template-columns:32px 1fr;column-gap:20px"><div style="display:flex;flex-direction:column;align-items:center"><span style="width:32px;height:32px;border-radius:50%;background:#1F6B4A;color:#ffffff;font-size:15px;font-weight:700;display:flex;align-items:center;justify-content:center">2</span><span style="width:2px;flex-grow:1;background:#C9D6CF"></span></div><div style="padding:3px 0 32px"><h3 style="margin:0 0 6px;font-size:20px;line-height:26px;font-weight:700">MDRRMO staff review it</h3><p style="margin:0;font-size:16px;line-height:26px;color:#4A544E">Staff approve and assign a unit, reschedule, or disapprove with a reason.</p></div></li>
+<li style="display:grid;grid-template-columns:32px 1fr;column-gap:20px"><div><span style="width:32px;height:32px;box-sizing:border-box;border-radius:50%;border:3px solid #E9A040;background:#ffffff;color:#7A420A;font-size:15px;font-weight:700;display:flex;align-items:center;justify-content:center">3</span></div><div style="padding:3px 0 0"><h3 style="margin:0 0 6px;font-size:20px;line-height:26px;font-weight:700">You follow it in the Track tab</h3><p style="margin:0;font-size:16px;line-height:26px;color:#4A544E">Every status change shows up in the app, with the office's reason when a request is not approved.</p></div></li>
+</ol>
 <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center">
 <span style="font-size:14px;font-weight:600;color:#4A544E;margin-right:6px">Request statuses</span>
-<span style="font-size:12px;font-weight:600;padding:4px 12px;border-radius:999px;background:#fdf1e1;color:#8a4b00">Pending</span>
+<span style="font-size:12px;font-weight:600;padding:4px 12px;border-radius:999px;background:#fdf1e1;color:#8a4b00">Under review</span>
 <span style="font-size:12px;font-weight:600;padding:4px 12px;border-radius:999px;background:#ece6f7;color:#5b21b6">Booked</span>
-<span style="font-size:12px;font-weight:600;padding:4px 12px;border-radius:999px;background:#e8f0fb;color:#155fa8">Responding</span>
-<span style="font-size:12px;font-weight:600;padding:4px 12px;border-radius:999px;background:#dcece7;color:#16483A">Resolved</span>
-<span style="font-size:12px;font-weight:600;padding:4px 12px;border-radius:999px;background:#fbe9e8;color:#b3261e">Disapproved</span>
+<span style="font-size:12px;font-weight:600;padding:4px 12px;border-radius:999px;background:#e8f0fb;color:#155fa8">Scheduled</span>
+<span style="font-size:12px;font-weight:600;padding:4px 12px;border-radius:999px;background:#dcece7;color:#16483A">Completed</span>
 <span style="font-size:12px;font-weight:600;padding:4px 12px;border-radius:999px;background:#e9edf2;color:#4A544E">Cancelled</span>
+<span style="font-size:12px;font-weight:600;padding:4px 12px;border-radius:999px;background:#fbe9e8;color:#b3261e">Not approved</span>
 </div>
 </div>
 </section>
@@ -236,27 +235,31 @@ Download the app</a>
 <div style="max-width:1184px;margin:0 auto;display:flex;flex-wrap:wrap;gap:48px;align-items:center">
 <div style="flex:1 1 440px;min-width:0;display:flex;flex-direction:column;gap:20px">
 <h2 style="margin:0;font-size:36px;line-height:44px;font-weight:700;letter-spacing:-0.02em;color:#ffffff">Download SERBIS for Android</h2>
-<p style="margin:0;font-size:16px;line-height:26px;color:#cfe3dc">SERBIS is not on the Play Store, so you install it from a file. Your phone may warn you about an unknown app. That is expected for apps outside the Play Store.</p>
+<p style="margin:0;font-size:15px;line-height:22px;color:#ffffff"><strong>Built for MDRRMO Echague</strong>, Municipality of Echague, Isabela.</p>
+<p style="margin:0;font-size:16px;line-height:26px;color:#cfe3dc">SERBIS is not on the Play Store, so you install it from a file. Your phone or Google Play Protect may warn you about an unknown app. That is expected for apps outside the Play Store. The steps on the right show what to tap.</p>
 <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
-<a href="https://github.com/BOXCUBE06/serbis_landing_page/releases/latest/download/serbis.apk" download aria-label="Download the SERBIS app file" style="display:inline-flex;align-items:center;gap:10px;padding:18px 32px;font-size:17px;font-weight:700;color:#0a2620;background:#34c39a;border-radius:999px;text-decoration:none">
+<a href="https://github.com/BOXCUBE06/serbis_landing_page/releases/download/v1.0.0/serbis.apk" download class="dlBtn pill" aria-label="Download the SERBIS app file" style="display:inline-flex;align-items:center;gap:10px;padding:18px 32px;font-size:17px;font-weight:700;color:#0a2620;background:#34c39a;border-radius:999px;text-decoration:none">
 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0a2620" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 11l5 5 5-5"/><path d="M5 20h14"/></svg>
 Download the app</a>
-<span style="font-size:14px;color:#cfe3dc">Version 1.0.0 · 56.5 MB · Android 7.0 or newer</span>
+<span style="font-size:14px;color:#cfe3dc">Version 1.0.0 · 56.5 MB · Android 7.0 or newer · Use Wi-Fi if you can</span>
 </div>
+<p class="dlStatus" role="status" style="margin:0;font-size:14px;line-height:20px;font-weight:600;color:#ffffff"></p>
+<p class="deskNote" style="margin:0;font-size:14px;line-height:22px;color:#cfe3dc">On a computer? Open serbis-landing-page.vercel.app on your Android phone to install.</p>
 <p style="margin:0;font-size:14px;line-height:22px;color:#cfe3dc">Android phones only. iPhones are not supported. Need help installing? Call <a href="tel:09176262352" style="color:#ffffff;text-decoration:underline">0917 626 2352</a> or visit the MDRRMO office.</p>
 </div>
 <div class="dlCard" style="flex:1 1 440px;min-width:0;background:#0f3a30;border-radius:24px;padding:32px;display:flex;flex-direction:column;gap:16px">
-<span style="font-size:12px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#9fd8c5">How to install</span>
+<h3 style="margin:0;font-size:17px;line-height:24px;font-weight:700;color:#ffffff">How to install</h3>
 <ol style="margin:0;padding-left:22px;display:flex;flex-direction:column;gap:12px;font-size:15px;line-height:22px;color:#ffffff">
 <li>Tap Download the app and wait for the file to finish.</li>
 <li>Open the file from your notifications or Downloads.</li>
-<li>If your phone asks, allow installs from this source.</li>
+<li>If your phone says it can't install unknown apps from this source, tap <strong>Settings</strong>, turn on <strong>Allow from this source</strong>, then go back and tap <strong>Install</strong>.</li>
+<li>If Google Play Protect warns you, tap <strong>More details</strong>, then <strong>Install anyway</strong>.</li>
 <li>Open SERBIS and create your account with your mobile number.</li>
-<li>Organizations: wait for MDRRMO to activate your account.</li>
+<li>Organizations: wait for MDRRMO to activate your account. To follow up, call <a href="tel:09176262352" style="color:#ffffff">0917 626 2352</a>.</li>
 </ol>
 <p style="margin:0;font-size:13px;line-height:20px;color:#9fbfb5">The steps can look different on each phone brand.</p>
-<span lang="fil" style="font-size:12px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#9fd8c5;margin-top:8px">Sa Filipino</span>
-<ol lang="fil" style="margin:0;padding-left:22px;display:flex;flex-direction:column;gap:10px;font-size:15px;line-height:22px;color:#ffffff"><li>I-tap ang Download the app at hintaying matapos ang file.</li><li>Buksan ang file mula sa notifications o sa Downloads.</li><li>Kung may lumabas na babala, payagan ang pag-install mula sa source na ito.</li><li>Buksan ang SERBIS at gumawa ng account gamit ang inyong mobile number.</li><li>Mga organisasyon: hintaying i-activate ng MDRRMO ang inyong account.</li></ol>
+<h3 lang="fil" style="margin:8px 0 0;font-size:17px;line-height:24px;font-weight:700;color:#ffffff">Sa Filipino</h3>
+<ol lang="fil" style="margin:0;padding-left:22px;display:flex;flex-direction:column;gap:10px;font-size:15px;line-height:22px;color:#ffffff"><li>I-tap ang Download the app at hintaying matapos ang file.</li><li>Buksan ang file mula sa notifications o sa Downloads.</li><li>Kung sabihin ng telepono na hindi ito makapag-install mula sa source na ito, i-tap ang <strong>Settings</strong>, i-on ang <strong>Allow from this source</strong>, bumalik, at i-tap ang <strong>Install</strong>.</li><li>Kung magbabala ang Google Play Protect, i-tap ang <strong>More details</strong>, saka ang <strong>Install anyway</strong>.</li><li>Buksan ang SERBIS at gumawa ng account gamit ang inyong mobile number.</li><li>Mga organisasyon: hintaying i-activate ng MDRRMO ang inyong account. Para mag-follow up, tumawag sa <a href="tel:09176262352" style="color:#ffffff">0917 626 2352</a>.</li></ol>
 </div>
 </div>
 </section>
@@ -329,16 +332,18 @@ Download the app</a>
 </div>
 </div>
 </section>
+</main>
 
 <!-- Footer -->
-<footer class="ftr" style="padding:32px 48px;background:#ffffff;border-top:1px solid #E3DDD1">
+<footer class="ftr" style="padding:32px 48px;background:#ffffff;border-top:1px solid #D8E0DB">
 <div style="max-width:1184px;margin:0 auto;display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;font-size:14px;line-height:20px;color:#4A544E">
 <span>MDRRMO Echague · Operations Center, Municipal Ground, San Fabian, Echague, Isabela</span>
 <span>Hotline: <a href="tel:09176262352" style="color:#16483A">0917 626 2352</a> / <a href="tel:09431320604" style="color:#16483A">0943 132 0604</a> · <a href="mailto:mdrrmo.echague@gmail.com" style="color:#16483A">mdrrmo.echague@gmail.com</a></span>
-<span>SERBIS is not an emergency line. Use the hotline numbers in the app.</span>
+<span>SERBIS is not an emergency line. In an emergency, call the hotline.</span>
 </div>
 </footer>
 
 </div>
+<script>document.querySelectorAll('.dlBtn').forEach(function(a){a.addEventListener('click',function(){var s=a.parentNode.parentNode.querySelector('.dlStatus');if(s)s.textContent='Download started. Open the file from your notifications when it finishes.'})})</script>
 </body>
 </html>
